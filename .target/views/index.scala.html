@@ -1,0 +1,10 @@
+@(txs:List[Transacao])
+
+<html>
+	<body>
+		@for(tx <- txs){
+			@tx.getValor </br>
+		}
+	</body>
+</html>
+
