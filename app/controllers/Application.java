@@ -20,6 +20,7 @@ public class Application extends Controller {
 				.getQueryString("quantidade"));
 		List<Transacao> transacoes = Ebean.find(Transacao.class)
 				.setMaxRows(quantidade).findList();
+		
 		return ok(views.html.index.render(transacoes));
 	}
 	
