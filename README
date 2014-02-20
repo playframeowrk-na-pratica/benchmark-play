@@ -1,4 +1,4 @@
-This is your new Play application
+Benchmark Play
 =====================================
 
-This file will be packaged with your application, when using `play dist`.
+O objetivo desta aplicação é sofrer testes de carga e stress para ser comparada com os outros frameworks do mercado.
