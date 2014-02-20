@@ -20,8 +20,12 @@ public class Application extends Controller {
 				.getQueryString("quantidade"));
 		List<Transacao> transacoes = Ebean.find(Transacao.class)
 				.setMaxRows(quantidade).findList();
+		List<Transacao> transacoes2 = Ebean.find(Transacao.class).setFirstRow(quantidade)
+				.setMaxRows(quantidade).findList();
+		List<Transacao> transacoes3 = Ebean.find(Transacao.class).setFirstRow(quantidade*2)
+				.setMaxRows(quantidade).findList();
 		
-		return ok(views.html.index.render(transacoes));
+		return ok(views.html.index.render(transacoes,transacoes2,transacoes3));
 	}
 	
 	public static Promise<Result> webservice(){

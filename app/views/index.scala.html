@@ -1,10 +1,16 @@
-@(txs:List[Transacao])
+@(txs1:List[Transacao],txs2:List[Transacao],txs3:List[Transacao])
 
 <html>
 	<body>
-		@for(tx <- txs){
+		@for(tx <- txs1){
 			@tx.getValor </br>
 		}
+		@for(tx <- txs2){
+			@tx.getValor </br>
+		}
+		@for(tx <- txs3){
+			@tx.getValor </br>
+		}				
 	</body>
 </html>
 
